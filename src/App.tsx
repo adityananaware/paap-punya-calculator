@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { paapPunyaData } from './Data/paapPunya';
 import bgImage from './assets/LakshmiNarayan.png';
+import { Analytics } from "@vercel/analytics/react";
 
 
 // Simple React single-file app that adds daily save/load + calendar overview
@@ -227,13 +228,14 @@ export default function App() {
           </label>
         </div>
       </header> 
-      <p style={{ marginBottom: '20px' }}>
+      <p style={{ color: '#e09c12', marginBottom: '20px' }}>
         This checklist is for <strong>daily use</strong>. Before going to sleep, check the boxes for
         actions you performed during the day. You will get <strong>approximate points</strong> you
         earned (Punya) or lost (Paap). You can adjust points manually using the +1 / -1 buttons.
       </p>
       {/* Add the disclaimer here */}
       <p style={{ fontSize: 12, color: '#900', marginBottom: 20 }}>
+        <Analytics />
         <strong>Note:</strong> The points and classifications in this checklist are <em>approximate</em> and
         are based on traditional Vaishnava scriptures such as the <em>Srimad Bhagavatam, Vishnu Purana,
         Garuda Purana, Padma Purana,</em> and the <em>Bhagavad Gita</em>. They are intended only to provide
@@ -243,8 +245,24 @@ export default function App() {
       <main style={{ marginTop: 18, marginBottom: FOOTER_HEIGHT + 20 }}>
         {viewMode === 'today' && (
           <section>
-            <p style={{ marginTop: 0 }}>Check items you did today and press <strong>Save</strong> to store progress for this date.</p>
-            {paapPunyaData.map((item, index) => (
+          <p style={{ color: '#900', fontWeight: 'bold', fontSize: '12px'}}>*For the best experience, please use a PC or rotate your mobile device.</p>
+          <p style={{ marginTop: 0 }}>Check items you did today and press <strong>Save</strong> to store progress for this date.</p>
+          <div style={{
+  backgroundColor: '#ffe6e6', // light red/pink background
+  color: '#900',              // dark red text
+  border: '1px solid #f5c2c2',
+  borderRadius: '8px',
+  padding: '10px 15px',
+  margin: '10px 0',
+  fontSize: '13px',
+  lineHeight: '1.4',
+}}>
+   <strong>Note for users:</strong> To save your daily progress, please <strong>download your JSON file</strong> regularly. 
+  When you want to continue tracking, <strong>upload the JSON file</strong> back into the app. 
+  Your daily progress will then be restored automatically.
+</div>
+
+           {paapPunyaData.map((item, index) => (
               <div key={index} style={{ border: '1px solid #ddd', borderRadius: 8, padding: 10, marginBottom: 10, backgroundColor: item.type === 'Paap' ? '#fff3f3' : '#f3fff7' }}>
                 <label style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <div>
@@ -366,25 +384,37 @@ export default function App() {
             <div>Created by: Aditya Nanaware</div>
             <div>Contact: <a href="mailto:notifiermedicine@gmail.com" style={{ color: '#0b07f0', textDecoration: 'underline' }}>notifiermedicine@gmail.com</a></div>
             <div style={{ color: '#e09c12' }}>  Website for personal lifestyle tracking based on Vaishnava scriptures</div>
-            <div>Support: <a href="upi://pay?pa=adityananaware2@ybl&pn=Aditya+Nanaware&am=0&cu=INR"style={{ color: '#f07007', textDecoration: 'underline' }}> adityananaware2@ybl</a></div>
+            <div>Support me with any amount: <a href="upi://pay?pa=adityananaware2@ybl&pn=Aditya+Nanaware&am=0&cu=INR"style={{ color: '#f07007', textDecoration: 'underline' }}> adityananaware2@ybl</a></div>
           </div>
         </div>
       </div>  
-      <div
+      
+        <div
   style={{
     minHeight: '100vh',
     padding: '2px',
     boxSizing: 'border-box',
     fontFamily: 'Arial, sans-serif',
     backgroundImage: `url(${bgImage})`,
-    backgroundSize: 'cover',      // makes it cover the whole container
-    backgroundPosition: 'center', // center the image
-    backgroundRepeat: 'no-repeat',// don't repeat
-    backgroundAttachment: 'fixed',// optional: image stays fixed when scrolling
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
   }}
 >
-  {/* rest of your app JSX */}
+  {/* Show note only on small screens */}
+  <div
+    style={{
+      display: 'none',
+    }}
+    className="mobile-note"
+  >
+    📌 For the best experience, please use a PC or rotate your mobile device.
+  </div>
+
+ 
 </div>
+
     
     </div>
   );

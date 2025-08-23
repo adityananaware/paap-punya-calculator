@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* Show note only on mobile screens */
+@media (max-width: 768px) {
+  .mobile-note {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 8px 12px;
+    margin: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+/* App.css */
+
+/* your existing styles... */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  h1, h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* only 2 per row on phones */
+    gap: 8px;
+  }
+}
