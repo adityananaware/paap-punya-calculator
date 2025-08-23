@@ -257,7 +257,7 @@ export default function App() {
                     <span style={{ marginLeft: 10 }}>Times: {adjustments[index] || 1}</span>
                   </div>
                 </label>
-                {item.source && <div style={{ fontSize: 12, marginTop: 6 }}>Sources: {item.source.join(', ')}</div>}
+                {/*item.source && <div style={{ fontSize: 12, marginTop: 6 }}>Sources: {item.source.join(', ')}</div>*/}
               </div>
             ))}
 
