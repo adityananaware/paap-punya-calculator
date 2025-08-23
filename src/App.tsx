@@ -16,10 +16,10 @@ function isoDate(d = new Date()) {
   return `${year}-${m}-${day}`;
 }
 
-function monthKey(year, monthIndex) {
+//function monthKey(year, monthIndex) {
   // monthIndex: 0-11
-  return `${year}-${String(monthIndex + 1).padStart(2, '0')}`;
-}
+  //return `${year}-${String(monthIndex + 1).padStart(2, '0')}`;
+//}
 
 export default function App() {
   const todayIso = isoDate();
