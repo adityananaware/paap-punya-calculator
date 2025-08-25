@@ -95,7 +95,7 @@ For suggestions, issues, or contributions:
 
 ## ⚖️ License
 
-MIT License © 2025 Aditya Nanaware. Feel free to use and share. Do Not copy or modify.
+copyright License © 2025 Aditya Nanaware. Feel free to use and share. Do Not copy or modify.
 
 ---
 
