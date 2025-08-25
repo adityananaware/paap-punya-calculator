@@ -1,69 +1,96 @@
-# React + TypeScript + Vite
+# 📿 Paap–Punya Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal spiritual self-tracking app inspired by **Bhagavatam, Garud Puran, Bhagavad Gita, and Vishnu Purana**. The app helps users record daily **Punya (virtuous deeds)** and **Paap (sins/mistakes)**, calculate totals, and visualize progress over time.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+* ✅ Checklist of Paap & Punya categorized by **minor, moderate, and major**
+* 📊 Daily scoring system (positive = Punya, negative = Paap)
+* 💾 Save & load daily progress (stored in browser localStorage)
+* 📅 Calendar view with daily totals
+* 📈 Monthly & yearly point summaries
+* 🔄 Export & import JSON backups
+* 📌 Fixed score bar always visible at bottom
+* 📧 Contact & copyright footer
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Node.js (>=16)
+* npm or yarn
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/paap-punya-tracker.git
+cd paap-punya-tracker
+
+# Install dependencies
+npm install
+
+# Run locally
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be available at `http://localhost:3000`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+
 ```
+paap-punya-tracker/
+│── src/
+│   ├── App.jsx         # Main app logic
+│   ├── Footer.jsx      # Footer with copyright & contact
+│   ├── data/
+│   │   └── paapPunya.js # List of deeds with scores
+│   └── components/     # Additional UI components
+│
+├── public/
+│   └── index.html
+│
+├── package.json
+├── README.md
+```
+
+---
+
+## 📜 Scripts
+
+* `npm start` → run development server
+* `npm run build` → build production files
+* `npm test` → run tests (if added)
+
+---
+
+## 🛠️ Technologies Used
+
+* React + Vite (or CRA)
+* TailwindCSS (UI styling)
+* LocalStorage API (data persistence)
+
+---
+
+## 📧 Contact
+
+For suggestions, issues, or contributions:
+
+* **Email:** [youremail@example.com](mailto:youremail@example.com)
+* **GitHub:** [yourusername](https://github.com/yourusername)
+
+---
+
+## ⚖️ License
+
+MIT License © 2025 Your Name. Feel free to use, modify, and share.
+
+---
+
+🙏 Inspired by Sanatan Dharma scriptures for self-reflection and personal growth.
