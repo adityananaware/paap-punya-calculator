@@ -17,6 +17,12 @@ A personal spiritual self-tracking app inspired by **Bhagavatam, Garud Puran, Bh
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Paap–Punya Calculator](https://paap-punya-calculator.vercel.app/)
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -28,7 +34,7 @@ A personal spiritual self-tracking app inspired by **Bhagavatam, Garud Puran, Bh
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/paap-punya-tracker.git
+git clone https://github.com/adityananaware/paap-punya-tracker.git
 cd paap-punya-tracker
 
 # Install dependencies
@@ -82,14 +88,14 @@ paap-punya-tracker/
 
 For suggestions, issues, or contributions:
 
-* **Email:** [youremail@example.com](mailto:youremail@example.com)
-* **GitHub:** [yourusername](https://github.com/yourusername)
+* **Email:** [adityananaware2@gmail.com](mailto:adityananaware2@gmail.com)
+* **GitHub:** [adityananaware](https://github.com/adityananaware)
 
 ---
 
 ## ⚖️ License
 
-MIT License © 2025 Your Name. Feel free to use, modify, and share.
+MIT License © 2025 Aditya Nanaware. Feel free to use, modify, and share.
 
 ---
 
